@@ -35,8 +35,14 @@ public class MorosoService {
         }
     }
 	
-	public List<Moroso> getMorosos() {
-		return repository.findAll();
+	public List<Moroso> getTablaMoroso() {
+		  List<Moroso> morosos = repository.findAll();
+
+		    for (Moroso m : morosos) {
+		        m.setMessage("El cliente identificado con el id:" + m.getIdcliente() + " debe ser notificado");
+		        messageMorosoService.sendMessage(m);
+		    }
+		return morosos;
 	}
 
 }

@@ -19,6 +19,9 @@ public class Moroso {
 	private Integer idcliente;
 	private double montoprestado;
 	
+	@Transient
+	private String message;
+	
 	public int getIdreporte() {
 		return idreporte;
 	}
@@ -42,6 +45,12 @@ public class Moroso {
 	}
 	public void setMontoprestado(double montoprestamo) {
 		this.montoprestado = montoprestamo;
+	}
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
 }

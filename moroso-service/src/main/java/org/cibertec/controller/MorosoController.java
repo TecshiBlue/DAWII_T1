@@ -24,8 +24,8 @@ public class MorosoController {
     }
     
     @GetMapping
-    public List<Moroso> getMorosos() {
-        return morosoService.getMorosos();
+    public List<Moroso> getTablaMoroso() {
+        return morosoService.getTablaMoroso();
     }
 
 }
